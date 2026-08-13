@@ -3,12 +3,14 @@
 name: CD
 
 on:
-  workflow_run:
-    workflows: ["CI"]
-    types:
-      - completed
-    branches:
-      - 'my-devboard-branch'
+  # workflow_run:
+  #   workflows: ["CI"]
+  #   types:
+  #     - completed
+  #   branches:
+  #     - 'my-devboard-branch'
+  workflow_call:
+    
 
 jobs:
   deploy:
